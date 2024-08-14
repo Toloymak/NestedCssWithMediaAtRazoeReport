@@ -1,0 +1,37 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<div>
+    <span class="wide">
+        Style not applying
+    </span>
+    <span class="narrow">
+        Style applying
+    </span>
+</div>
+
+<style>
+    div {
+        .wide{
+            background-color: yellow;
+        }
+        
+        .narrow {
+            display: none;
+            background-color: green;
+        }
+
+        @@media (max-width: 1000px) {
+            .narrow {
+                display: block;
+            }
+    
+            .wide {
+                display: none;
+            }
+        }
+    }
+</style>
